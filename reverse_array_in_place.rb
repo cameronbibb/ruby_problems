@@ -6,11 +6,7 @@ def reverse_array!(arr)
   b = arr.length - 1
 
   while a <= b
-    # swap a and b
-    a_elem = arr[a]
-    b_elem = arr[b]
-    arr[b] = a_elem
-    arr[a] = b_elem
+    arr[a], arr[b] = arr[b], arr[a]
     a += 1
     b -= 1
   end
@@ -18,10 +14,10 @@ def reverse_array!(arr)
   arr
 end
 
-p reverse_array!([1, 2, 3, 4])  # Expected: [4, 3, 2, 1]
-p reverse_array!(['a', 'b', 'c', 'd'])  # Expected: ['d', 'c', 'b', 'a']
-p reverse_array!([5])  # Expected: [5] (Edge case: single element)
-p reverse_array!([])  # Expected: [] (Edge case: empty array)
+p reverse_array!([1, 2, 3, 4]) == [4, 3, 2, 1]
+p reverse_array!(['a', 'b', 'c', 'd']) == ['d', 'c', 'b', 'a']
+p reverse_array!([5]) == [5] # (Edge case: single element)
+p reverse_array!([]) == [] # (Edge case: empty array)
 
 =begin
   two-pointer approach
