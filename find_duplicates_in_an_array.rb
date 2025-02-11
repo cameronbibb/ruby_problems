@@ -3,15 +3,12 @@
 
 def find_duplicates(arr)
   nums_found = {}
-  i = 0
   result =[]
-  while i < arr.length
-    if nums_found.key?(arr[i])
-      result.push(arr[i])
-    end
-    nums_found[arr[i]] = i
-    i += 1
+  arr.each do |num|
+    result.push(num) if nums_found[num]
+    nums_found[num] = true
   end
+  
   result
 end
 
