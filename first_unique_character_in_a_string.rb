@@ -1,4 +1,5 @@
-# Given a string, return the first non-repeating character.
+# Given a string, return the first non-repeating character. Restraint: Use a hash.
+# TIME: 11:10
 
 def first_unique_char(str)
   occurrences = Hash.new(0)
