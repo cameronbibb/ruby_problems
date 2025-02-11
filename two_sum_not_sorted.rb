@@ -2,7 +2,7 @@
 # TIME: 14:00
 
 def two_sum(arr, target)
-  nums = Hash.new(0)
+  nums = {}
   arr.each_with_index do |num, idx|
     difference = target - num
     return [nums[difference], idx] if nums.key?(difference)
